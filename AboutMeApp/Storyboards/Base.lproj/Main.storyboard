@@ -39,6 +39,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log in"/>
+                                        <connections>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="isL-Iv-GYp"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-yd-eha">
                                         <rect key="frame" x="0.0" y="158" width="288" height="48"/>
@@ -47,11 +50,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="101.5" height="48"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfg-QR-NNW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-UN-zWe">
                                                 <rect key="frame" x="186.5" y="0.0" width="101.5" height="48"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="unwindSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbS-xz-yBx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -67,6 +76,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTF" destination="IeC-gu-LGt" id="DoJ-0S-XvL"/>
+                        <outlet property="userNameTF" destination="nB6-A9-C1H" id="gmn-Dx-NI2"/>
                         <segue destination="1Sq-tO-96F" kind="presentation" modalPresentationStyle="fullScreen" id="e4v-Px-d4g"/>
                     </connections>
                 </viewController>
@@ -77,7 +88,7 @@
         <!--Home-->
         <scene sceneID="EKZ-xi-sac">
             <objects>
-                <viewController id="Pwf-7q-RHu" sceneMemberID="viewController">
+                <viewController id="Pwf-7q-RHu" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byW-Hb-xXh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
